@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwsg5ki0c46gc"]
+
+[ext_resource type="Script" path="res://bca_godot_lib/GDScript/2D/Area2D/generic_circle_hitbox/generic_circle_hitbox.gd" id="1_ykqah"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pud52"]
+resource_local_to_scene = true
+radius = 3.5
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rbluf"]
+resource_local_to_scene = true
+b = Vector2(0, 0)
+
+[node name="generic_circle_hitbox" type="Area2D"]
+script = ExtResource("1_ykqah")
+
+[node name="true_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pud52")
+
+[node name="offset_shape" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.667)
+shape = SubResource("SegmentShape2D_rbluf")
+
+[node name="last_tick_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pud52")
