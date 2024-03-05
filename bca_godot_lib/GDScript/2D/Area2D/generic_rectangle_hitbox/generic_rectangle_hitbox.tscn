@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://hsx01xdn6wd1"]
+
+[ext_resource type="Script" path="res://content/node_scripts/generic_rectangle_hitbox.gd" id="1_q08qo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3h4xs"]
+resource_local_to_scene = true
+
+[node name="generic_rectangle_hitbox" type="Area2D"]
+script = ExtResource("1_q08qo")
+
+[node name="true_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3h4xs")
+
+[node name="offset_shape" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="last_tick_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3h4xs")
