@@ -5,7 +5,7 @@ extends Area2D
 @onready var _offset:Node = get_node("offset_shape")
 
 func _ready()->void:
-	set_shape(_shape_0.shape.size)
+	set_size(_shape_0.shape.size)
 
 func set_offset(last_tick_pos_offset:Vector2, last_tick_rot_offset:float)->void:
 	_shape_1.set_position(last_tick_pos_offset)
@@ -73,9 +73,12 @@ func set_offset(last_tick_pos_offset:Vector2, last_tick_rot_offset:float)->void:
 		_offset.polygon.fill(Vector2(0.0, 0.0))
 		_offset.polygon[x-1] = Vector2(all_using_points[x-1].point)
 
-func set_shape(size:Vector2)->void:
+func set_size(size:Vector2)->void:
 	_shape_0.shape.size = size
 	set_offset(_shape_1.position, _shape_1.rotation)
+
+func get_size()->Vector2:
+	return _shape_0.shape.size
 
 class diagonal:
 	var point_0:Vector2
