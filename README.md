@@ -15,7 +15,7 @@
 名称: `generic_rectangle_hitbox`  
 语言: `GDScript`  
 引擎版本: `v4.2.1.stable.official [b09f793f5]`  
-最后更新时间: 2024年3月6日  
+最后更新时间: 2024年3月17日  
 根节点类型: `Area2D`  
 已用节点类型: `Area2D`、`CollisionShape2D`、`CollisionPolygon2D`
 > 在普通的矩形Area2D判定区域基础上增加了两个额外的判定形状，分别是一个矩形(`RectangleShape2D`)和一个四边形，用来表示矩形区域在上一帧的位置和旋转姿态(不支持偏斜(skew))，和两个矩形之间的过渡区域。此种判定箱用简单粗暴的方式解决了当物体移动速度过快而跃过了本应触碰的判定区域的问题。  
