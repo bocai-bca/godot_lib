@@ -2,6 +2,21 @@
 这个仓库包含了一些封装好功能的场景以供你直接导入进Godot项目中使用，如果是直接粘贴使用而非拆解学习，请留意日后可能为适配Godot新版本或修复漏洞而更新，记得跟随。  
 
 # 索引  
+## 类  
+### [GD链表](bca_godot_lib/GDScript/Classes/linked_list)
+名称: `linked_list`  
+类型名称: `LinkedListGD`  
+语言: `GDScript`  
+引擎版本: `v4.2.1.stable.official [b09f793f5]`
+最后更新时间: 2024年3月25日
+> 使用GDScript编写的动态类型链表，每个链表节点具有值与子节点两个属性，可以与`DoublyLinkedListGD`混用。值可以为任何类型，子节点必须是`LinkedListGD`或`DoublyLinkedListGD`。
+### [GD双向链表](bca_godot_lib/GDScript/Classes/linked_list)
+名称: `doubly_linked_list`  
+类型名称: `DoublyLinkedListGD`  
+语言: `GDScript`  
+引擎版本: `v4.2.1.stable.official [b09f793f5]`
+最后更新时间: 2024年3月25日
+> 使用GDScript编写的动态类型链表，每个链表节点具有值、子节点与父节点三个属性，可以与`LinkedListGD`混用。值可以为任何类型，子节点与父节点必须是`LinkedListGD`或`DoublyLinkedListGD`。
 ## 2D  
 ### [有过渡补间的圆形判定箱](bca_godot_lib/GDScript/2D/Area2D/generic_circle_hitbox)  
 名称: `generic_circle_hitbox`  
